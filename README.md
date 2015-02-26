@@ -1,14 +1,16 @@
 # NAME
 
-Hash::Filter - It's new $module
+Hash::Filter - filtering Hash's value by Hash's key.
 
 # SYNOPSIS
 
     use Hash::Filter;
+    my $f = Hash::Filter->new(filters => ["password"]);
+    $f->filter({password => "12345", hoge => "hoge"}) #=> {password => "[FILTERED]", hoge => "hoge"}
 
 # DESCRIPTION
 
-Hash::Filter is ...
+Hash::Filter is filtering Hash's value by Hash's key.
 
 # LICENSE
 
