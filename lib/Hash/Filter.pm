@@ -67,17 +67,17 @@ __END__
 
 =head1 NAME
 
-Hash::Filter - It's new $module
+Hash::Filter - filtering Hash's value by Hash's key.
 
 =head1 SYNOPSIS
 
     use Hash::Filter;
-    my $f = Hash::Filter->new(keys => ["password"]);
-    $f.filter({password => "12345", hoge => "hoge"}) #=> {password => "[FILTERED]", hoge => "hoge"}
+    my $f = Hash::Filter->new(filters => ["password"]);
+    $f->filter({password => "12345", hoge => "hoge"}) #=> {password => "[FILTERED]", hoge => "hoge"}
 
 =head1 DESCRIPTION
 
-Hash::Filter is ...
+Hash::Filter is filtering Hash's value by Hash's key.
 
 =head1 LICENSE
 
