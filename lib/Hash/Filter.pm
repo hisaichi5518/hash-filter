@@ -43,10 +43,9 @@ sub filter {
             $val = $self->filter($val);
         }
         elsif (ref $val eq "ARRAY") {
-            $val = map {
-                return $_ if not ref $_ eq "HASH";
-                $self->filter($_);
-            } @$val;
+            $val = [map {
+              (ref $_ eq "HASH") ? $self->filter($_) : $_;
+            } @$val];
         }
         $result->{$key} = $val;
     }

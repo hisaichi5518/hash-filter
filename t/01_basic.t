@@ -9,12 +9,14 @@ subtest "#filter" => sub {
         password => "hisaichi5518",
         name     => "hisaichi5518",
         deep     => {deep => {password => "hisaichi5518"}},
+        array    => ["hisaichi5518", {password => "hisaichi5518"}],
     };
 
     is_deeply $f->filter($hash), {
         password => $Hash::Filter::FILTERED,
         name     => "hisaichi5518",
         deep     => {deep => {password => $Hash::Filter::FILTERED}},
+        array    => ["hisaichi5518", {password => $Hash::Filter::FILTERED}],
     };
 };
 
