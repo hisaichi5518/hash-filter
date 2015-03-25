@@ -6,7 +6,6 @@ use warnings;
 our $VERSION = "0.01";
 
 use Mouse;
-use Hash::Merge ();
 
 has filters => (
     is => "ro",
